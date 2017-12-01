@@ -33,7 +33,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/dist/index.html'));
 });
 
-// Start Server: Listen on port 8080
+// Start Server: Listen on port 8040
 app.listen(8040, () => {
-  console.log('Listening on port 8080');
+  console.log('Listening on port 8040');
 });
