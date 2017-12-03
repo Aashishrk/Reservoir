@@ -183,6 +183,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     document.body.classList.add('bg-img');
+    document.body.classList.remove('bg-img1');
   }
 
 }

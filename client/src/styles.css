@@ -7,13 +7,16 @@
   background-size: cover;
   opacity: 0.8;
   filter: alpha(opacity=80);
-  /*
-  background: url('http://0.media.collegehumor.cvcdn.com/70/45/9d37320a849fdd2f37d4de18cf0c0c2d.gif')repeat-y 100% 100% fixed;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.8;
-  filter: alpha(opacity=80)
-  */
+
+}
+.bg-img1{
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    height: 100%;
+    background-color: #333;
+
+
 }
 
 

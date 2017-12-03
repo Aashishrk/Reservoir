@@ -12,6 +12,9 @@ import { LoginComponent } from './components/login/login.component';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AuthGuard } from './guards/auth.guard';
 import { NotAuthGuard } from './guards/notAuth.guard';
+import { StatsComponent } from './components/stats/stats.component';
+import { SearchComponent } from './components/search/search.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { NotAuthGuard } from './guards/notAuth.guard';
     HomeComponent,
     RegisterComponent,
     LoginComponent,
+    StatsComponent,
+    SearchComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,9 +5,16 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { NotAuthGuard } from './guards/notAuth.guard';
-
+import { StatsComponent } from './components/stats/stats.component';
+import { SearchComponent } from './components/search/search.component';
+import { BlogComponent } from './components/blog/blog.component';
 // Our Array of Angular 2 Routes
 const appRoutes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+    canActivate: [AuthGuard] // User must be logged in to view this route
+  },
   {
     path: 'register',
     component: RegisterComponent, // Register Route
@@ -15,13 +22,26 @@ const appRoutes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent, // Login Route 
-    canActivate: [NotAuthGuard]// "Catch-All" Route 
+    component: LoginComponent, // Login Route
+    canActivate: [NotAuthGuard]// "Catch-All" Route
   },
-  { path: '**', 
-  component: HomeComponent,  
-  canActivate: [AuthGuard] // User must be logged in to view this route 
-}
+  {
+    path: 'stats',
+    component: StatsComponent, // Ananlysis Route
+    canActivate: [AuthGuard] // User must be logged in to view this route
+  },
+  {
+    path: 'search',
+    component: SearchComponent, // search Component
+    canActivate: [AuthGuard] // User must be logged in to view this route
+  },
+  {
+    path: 'blog',
+    component: BlogComponent, // Blog Component
+    canActivate: [AuthGuard] // User must be logged in to view this route
+  },
+  {
+    path: '**', component: HomeComponent, } // Catch All Routes
 ];
 
 @NgModule({
