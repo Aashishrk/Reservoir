@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 
-body {
+.bg-img {
   background: url('https://78.media.tumblr.com/36b026cfa950392c5f27a6774ce029d2/tumblr_p05ozhpjzc1uq7yj2o1_500.gif') repeat-y 100% 100% fixed;
   background-position: center;
   background-size: cover;
@@ -15,4 +15,5 @@ body {
   filter: alpha(opacity=80)
   */
 }
+
 

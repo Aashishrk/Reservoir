@@ -83,6 +83,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     // On page load, check if user was redirected to login
+    document.body.classList.add('bg-img');
     if (this.authGuard.redirectUrl) {
       this.messageClass = 'alert alert-danger'; // Set error message: need to login
       this.message = 'You must be logged in to view that page.'; // Set message

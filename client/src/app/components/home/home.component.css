@@ -1,0 +1,32 @@
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+header.masthead {
+  background: url('https://78.media.tumblr.com/a44261854f4d6499dd066318364637d1/tumblr_p0d5q9d9Dd1uq7yj2o1_1280.jpg') no-repeat center center scroll;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+header.masthead>.overlay {
+  padding: 5rem 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 992px) {
+  header.masthead>.overlay {
+    padding: 10rem 0;
+  }
+}
+
+
