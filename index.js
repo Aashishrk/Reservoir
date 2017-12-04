@@ -11,6 +11,7 @@ const path = require('path'); // NodeJS Package for file paths
 const authentication = require('./routes/authentication')(router); // Import Authentication Routes
 const bodyParser = require('body-parser'); // Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
 const cors = require('cors'); // CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+const port = process.env.PORT;
 
 // Database Connection
 mongoose.connect(config.uri, (err) => {
@@ -34,6 +35,6 @@ app.get('*', (req, res) => {
 });
 
 // Start Server: Listen on port 8040
-app.listen(process.env.PORT || 8040, () => {
-  console.log('Listening on port' + process.env.PORT);
+app.listen(port || 8040, () => {
+  console.log('Listening on port' + port);
 });
