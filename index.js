@@ -34,6 +34,6 @@ app.get('*', (req, res) => {
 });
 
 // Start Server: Listen on port 8040
-app.listen(8040, () => {
+app.listen(process.env.PORT || 8040, () => {
   console.log('Listening on port 8040');
 });
