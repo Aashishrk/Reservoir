@@ -15,6 +15,19 @@ import { NotAuthGuard } from './guards/notAuth.guard';
 import { StatsComponent } from './components/stats/stats.component';
 import { SearchComponent } from './components/search/search.component';
 import { BlogComponent } from './components/blog/blog.component';
+// Fix for "Expression has changed after it was checked. Previous value: container-"
+import { enableProdMode } from '@angular/core'
+enableProdMode();
+
+import { FusionChartsModule } from 'angular2-fusioncharts';
+
+// Load FusionCharts
+import * as FusionCharts from 'fusioncharts';
+// Load charts module
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+// Load Ocean theme
+import * as Ocean from 'fusioncharts/themes/fusioncharts.theme.ocean';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +45,8 @@ import { BlogComponent } from './components/blog/blog.component';
     HttpModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    FlashMessagesModule
+    FlashMessagesModule,
+    FusionChartsModule.forRoot(FusionCharts, Charts, Ocean)
   ],
   providers: [AuthService, AuthGuard, NotAuthGuard],
   bootstrap: [AppComponent]

@@ -1,1 +1,20 @@
-<h1 class="page-header" id="a">Statistical Page Page</h1>
+<div class="container" id="a">
+    <fusioncharts width="500" height="500" style="float:left" type="doughnut2d" dataFormat="json" [dataSource]=dataSource2>
+    </fusioncharts>
+<fusioncharts  width={{width}} height={{height}} style="float:right" type={{type}} dataFormat={{dataFormat}} [dataSource]=dataSource>
+</fusioncharts>
+
+<div>
+    <div class="a1">
+        <span>
+            <button type="button" class="btn btn-warning" (click)="updateMyChartData()">More...</button>
+        </span>
+    </div>
+
+    <div id = "b">
+        <fusioncharts width="500" height="500" style="float:left" type="mscombi2d" [dataSource]=dataSource3>
+        </fusioncharts>
+    </div>
+ </div>
+</div>
+
