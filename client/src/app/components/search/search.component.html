@@ -1,5 +1,5 @@
 
-   <h2>List of Reservoirs</h2>
+    <h2>List of Reservoirs</h2>
 
 
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..." title="Type here">
@@ -259,3 +259,27 @@
 
     </table>
 
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, n;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            n = document.getElementById("Input").value;
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[n];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+
+
+
+    </script>

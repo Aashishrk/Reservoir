@@ -12,8 +12,7 @@ import { BlogComponent } from './components/blog/blog.component';
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    canActivate: [AuthGuard] // User must be logged in to view this route
+    component: HomeComponent // Default Route
   },
   {
     path: 'register',
@@ -23,7 +22,7 @@ const appRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent, // Login Route
-    canActivate: [NotAuthGuard]// "Catch-All" Route
+    canActivate: [NotAuthGuard] // User must NOT be logged in to view this route
   },
   {
     path: 'stats',
@@ -40,8 +39,7 @@ const appRoutes: Routes = [
     component: BlogComponent, // Blog Component
     canActivate: [AuthGuard] // User must be logged in to view this route
   },
-  {
-    path: '**', component: HomeComponent, } // Catch All Routes
+  { path: '**', component: HomeComponent } // "Catch-All" Route
 ];
 
 @NgModule({

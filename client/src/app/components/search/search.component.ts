@@ -27,6 +27,8 @@ export class SearchComponent implements OnInit {
     }
   }
   ngOnInit() {
+    document.body.classList.remove('bg-img');
+    document.body.classList.remove('bg-img');
     document.body.classList.remove('bg-img1');
   }
 
