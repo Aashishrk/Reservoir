@@ -1268,7 +1268,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AuthService = (function () {
     function AuthService(http) {
         this.http = http;
-        this.domain = 'http://localhost:8040'; // Development Domain - Not Needed in Production
+        // domain = 'http://localhost:8040';  Development Domain - Not Needed in Production
+        this.domain = 'https://reservoir-app.herokuapp.com/';
     }
     // Function to create headers, add token, to be used in HTTP requests
     AuthService.prototype.createAuthenticationHeaders = function () {

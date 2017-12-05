@@ -6,7 +6,8 @@ import { tokenNotExpired } from 'angular2-jwt';
 @Injectable()
 export class AuthService {
 
-  domain = 'http://localhost:8040'; // Development Domain - Not Needed in Production
+  // domain = 'http://localhost:8040';  Development Domain - Not Needed in Production
+  domain = 'https://reservoir-app.herokuapp.com/';
   authToken;
   user;
   options;
