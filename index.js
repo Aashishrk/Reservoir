@@ -31,7 +31,7 @@ app.use('/authentication', authentication);
 
 // Connect server to Angular 2 Index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/dist/index.html'));
+  res.sendFile(path.join(__dirname,'client','dist','index.html'));
 });
 
 // Start Server: Listen on port 8040
