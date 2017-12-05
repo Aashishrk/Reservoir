@@ -6,7 +6,7 @@
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" routerLink="/home"> Reservoir </a>
+      <a class="navbar-brand" *ngIf="authService.loggedIn()" routerLink="/home"> Reservoir </a>
     </div>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
