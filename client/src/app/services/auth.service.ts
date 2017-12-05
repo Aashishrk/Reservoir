@@ -6,8 +6,7 @@ import { tokenNotExpired } from 'angular2-jwt';
 @Injectable()
 export class AuthService {
 
-  // domain = 'http://localhost:8040';  Development Domain - Not Needed in Production
-  domain = 'https://reservoir-app.herokuapp.com/';
+  domain = "http://localhost:8040"; // Development Domain - Not Needed in Production
   authToken;
   user;
   options;
@@ -30,7 +29,7 @@ export class AuthService {
 
   // Function to get token from client local storage
   loadToken() {
-    this.authToken = localStorage.getItem('token'); ; // Get token and asssign to variable to be used elsewhere
+    this.authToken = localStorage.getItem('token');; // Get token and asssign to variable to be used elsewhere
   }
 
   // Function to register user accounts
@@ -78,5 +77,7 @@ export class AuthService {
   loggedIn() {
     return tokenNotExpired();
   }
-// tslint:disable-next-line:eofline
+
+
+
 }
