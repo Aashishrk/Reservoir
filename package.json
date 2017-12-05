@@ -4,13 +4,11 @@
   "description": "Reservoir Application",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "postinstall": "bower install && gulp build-libs && gulp build"
   },
-  "repository": {
-  },
-  "keywords": [
-    
-  ],
+  "repository": {},
+  "keywords": [],
   "author": "Aashish radhakrishnan",
   "license": "ISC",
   "bugs": {
@@ -24,5 +22,8 @@
     "express": "^4.16.2",
     "jsonwebtoken": "^7.4.3",
     "mongoose": "^4.13.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
