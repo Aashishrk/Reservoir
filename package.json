@@ -1,14 +1,14 @@
 {
   "name": "mean-ang2",
   "version": "1.0.0",
-  "description": "MEAN Stack with Angular 2",
+  "description": "Reservoir application",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gugui3z24/MEAN-Stack-With-Angular-2-Tutorial.git"
+    "url": ""
   },
   "keywords": [
     "MEAN",
@@ -17,12 +17,12 @@
     "2",
     "Application"
   ],
-  "author": "David Acosta",
+  "author": "Aashish Radhakrishnan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gugui3z24/MEAN-Stack-With-Angular-2-Tutorial/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/gugui3z24/MEAN-Stack-With-Angular-2-Tutorial#readme",
+  "homepage": "",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
