@@ -1,1 +1,8 @@
-<h1 class="page-header" id="a">Blog Page</h1>
+<div id="a" class="container">
+<ul>
+	<li *ngFor="let links of news.hits">
+		<a href={{links.url}} target="_blank">{{links.url}}</a>
+	</li>
+</ul>
+
+</div>

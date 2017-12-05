@@ -8,6 +8,7 @@ import { NotAuthGuard } from './guards/notAuth.guard';
 import { StatsComponent } from './components/stats/stats.component';
 import { SearchComponent } from './components/search/search.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { HackerNewsService } from './components/blog/blog.service';
 // Our Array of Angular 2 Routes
 const appRoutes: Routes = [
   {

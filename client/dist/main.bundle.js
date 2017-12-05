@@ -185,13 +185,14 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_stats_stats_component__ = __webpack_require__("../../../../../src/app/components/stats/stats.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_search_search_component__ = __webpack_require__("../../../../../src/app/components/search/search.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_blog_blog_component__ = __webpack_require__("../../../../../src/app/components/blog/blog.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angular2_fusioncharts__ = __webpack_require__("../../../../angular2-fusioncharts/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_fusioncharts__ = __webpack_require__("../../../../fusioncharts/fusioncharts.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_fusioncharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18_fusioncharts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_fusioncharts_fusioncharts_charts__ = __webpack_require__("../../../../fusioncharts/fusioncharts.charts.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_fusioncharts_fusioncharts_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_fusioncharts_fusioncharts_charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_fusioncharts_themes_fusioncharts_theme_ocean__ = __webpack_require__("../../../../fusioncharts/themes/fusioncharts.theme.ocean.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_fusioncharts_themes_fusioncharts_theme_ocean___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_fusioncharts_themes_fusioncharts_theme_ocean__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_blog_blog_service__ = __webpack_require__("../../../../../src/app/components/blog/blog.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_angular2_fusioncharts__ = __webpack_require__("../../../../angular2-fusioncharts/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_fusioncharts__ = __webpack_require__("../../../../fusioncharts/fusioncharts.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_fusioncharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_fusioncharts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_fusioncharts_fusioncharts_charts__ = __webpack_require__("../../../../fusioncharts/fusioncharts.charts.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_fusioncharts_fusioncharts_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_fusioncharts_fusioncharts_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_fusioncharts_themes_fusioncharts_theme_ocean__ = __webpack_require__("../../../../fusioncharts/themes/fusioncharts.theme.ocean.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_fusioncharts_themes_fusioncharts_theme_ocean___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_fusioncharts_themes_fusioncharts_theme_ocean__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -201,6 +202,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -242,12 +245,13 @@ var AppModule = (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_4__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_11_angular2_flash_messages__["FlashMessagesModule"],
-                __WEBPACK_IMPORTED_MODULE_17_angular2_fusioncharts__["a" /* FusionChartsModule */].forRoot(__WEBPACK_IMPORTED_MODULE_18_fusioncharts__, __WEBPACK_IMPORTED_MODULE_19_fusioncharts_fusioncharts_charts__, __WEBPACK_IMPORTED_MODULE_20_fusioncharts_themes_fusioncharts_theme_ocean__)
+                __WEBPACK_IMPORTED_MODULE_18_angular2_fusioncharts__["a" /* FusionChartsModule */].forRoot(__WEBPACK_IMPORTED_MODULE_19_fusioncharts__, __WEBPACK_IMPORTED_MODULE_20_fusioncharts_fusioncharts_charts__, __WEBPACK_IMPORTED_MODULE_21_fusioncharts_themes_fusioncharts_theme_ocean__)
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_9__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_12__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_13__guards_notAuth_guard__["a" /* NotAuthGuard */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_9__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_12__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_13__guards_notAuth_guard__["a" /* NotAuthGuard */], __WEBPACK_IMPORTED_MODULE_17__components_blog_blog_service__["a" /* HackerNewsService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         }), 
         __metadata('design:paramtypes', [])
@@ -266,7 +270,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#a {\r\n  padding-top: 50%;\r\n}\r\n", ""]);
+exports.push([module.i, "li,\r\na {\r\n  font-size: 20px;\r\n  font-family: fantasy;\r\n  margin: 10px;\r\n  color: white;\r\n}\r\n\r\nul:hover {\r\n  color:blue;\r\n}\r\n\r\n#a{\r\n    padding-top: 10%; \r\n}", ""]);
 
 // exports
 
@@ -279,7 +283,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/blog/blog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"page-header\" id=\"a\">Blog Page</h1>"
+module.exports = "<div id=\"a\" class=\"container\">\n<ul>\n\t<li *ngFor=\"let links of news.hits\">\n\t\t<a href={{links.url}} target=\"_blank\">{{links.url}}</a>\n\t</li>\n</ul>\n\n</div>\n"
 
 /***/ }),
 
@@ -289,6 +293,7 @@ module.exports = "<h1 class=\"page-header\" id=\"a\">Blog Page</h1>"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BlogComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__blog_service__ = __webpack_require__("../../../../../src/app/components/blog/blog.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -299,23 +304,67 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var BlogComponent = (function () {
-    function BlogComponent() {
+    function BlogComponent(HackerNewsService) {
+        var _this = this;
+        this.HackerNewsService = HackerNewsService;
+        this.news = {};
+        this.HackerNewsService.getNews().subscribe(function (data) { return _this.news = data; });
+        document.body.classList.add('bg-img1');
+        document.body.classList.remove('bg-img');
     }
-    BlogComponent.prototype.ngOnInit = function () {
-        document.body.classList.remove('bg-img1');
-    };
     BlogComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-blog',
+            selector: 'BlogComponent',
             template: __webpack_require__("../../../../../src/app/components/blog/blog.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/blog/blog.component.css")]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__blog_service__["a" /* HackerNewsService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__blog_service__["a" /* HackerNewsService */]) === 'function' && _a) || Object])
     ], BlogComponent);
     return BlogComponent;
+    var _a;
 }());
 //# sourceMappingURL=C:/Users/Aashish/Desktop/Reservoir/client/src/blog.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/blog/blog.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HackerNewsService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var HackerNewsService = (function () {
+    function HackerNewsService(http) {
+        this.http = http;
+    }
+    HackerNewsService.prototype.getNews = function () {
+        return this.http.get("https://hn.algolia.com/api/v1/search_by_date?query=nodejs&tags=story")
+            .map(function (res) { return res.json(); });
+    };
+    HackerNewsService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === 'function' && _a) || Object])
+    ], HackerNewsService);
+    return HackerNewsService;
+    var _a;
+}());
+//# sourceMappingURL=C:/Users/Aashish/Desktop/Reservoir/client/src/blog.service.js.map
 
 /***/ }),
 
@@ -443,8 +492,8 @@ var LoginComponent = (function () {
     // Function to create login form
     LoginComponent.prototype.createForm = function () {
         this.form = this.formBuilder.group({
-            username: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].required],
-            password: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].required] // Password field
+            username: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required],
+            password: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required] // Password field
         });
     };
     // Function to disable form
@@ -655,28 +704,28 @@ var RegisterComponent = (function () {
     RegisterComponent.prototype.createForm = function () {
         this.form = this.formBuilder.group({
             // Email Input
-            email: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].required,
-                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].minLength(5),
-                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].maxLength(30),
+            email: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required,
+                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].minLength(5),
+                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].maxLength(30),
                     this.validateEmail // Custom validation
                 ])],
             // Username Input
-            username: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].required,
-                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].minLength(3),
-                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].maxLength(15),
+            username: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required,
+                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].minLength(3),
+                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].maxLength(15),
                     this.validateUsername // Custom validation
                 ])],
             // Password Input
-            password: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].required,
-                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].minLength(8),
-                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].maxLength(35),
+            password: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required,
+                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].minLength(8),
+                    __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].maxLength(35),
                     this.validatePassword // Custom validation
                 ])],
             // Confirm Password Input
-            confirm: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].required] // Field is required
+            confirm: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required] // Field is required
         }, { validator: this.matchingPasswords('password', 'confirm') }); // Add custom validator to form for matching passwords
     };
     // Function to disable the registration form
@@ -1268,7 +1317,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AuthService = (function () {
     function AuthService(http) {
         this.http = http;
-        this.domain = "http://localhost:8040"; // Development Domain - Not Needed in Production
+        this.domain = 'http://localhost:8040'; // Development Domain - Not Needed in Production
     }
     // Function to create headers, add token, to be used in HTTP requests
     AuthService.prototype.createAuthenticationHeaders = function () {
